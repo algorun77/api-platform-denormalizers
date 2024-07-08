@@ -29,4 +29,11 @@ class DummyDenormalizer implements DenormalizerInterface, DenormalizerAwareInter
             !isset($context[__CLASS__])
         );
     }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [
+            Dummy::class => true
+        ];
+    }
 }
